@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikyath M A | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-ring" id="cursorRing">
+        <svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" /></svg>
+    </div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <canvas class="cursor-canvas" id="cursorCanvas"></canvas>
+
+    <!-- Ambient Glow -->
+    <div class="ambient-glow" id="ambientGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo" data-cursor="pointer">
+                <span class="logo-symbol">⟨</span>V.MA<span class="logo-symbol">⟩</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link" data-cursor="pointer">About</a></li>
+                <li><a href="#experience" class="nav-link" data-cursor="pointer">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-cursor="pointer">Projects</a></li>
+                <li><a href="#journey" class="nav-link" data-cursor="pointer">Journey</a></li>
+                <li><a href="#certifications" class="nav-link" data-cursor="pointer">Certifications</a></li>
+                <li><a href="#achievements" class="nav-link" data-cursor="pointer">Achievements</a></li>
+                <li><a href="#contact" class="nav-link" data-cursor="pointer">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" data-cursor="pointer" aria-label="Toggle theme">
+                    <div class="toggle-track">
+                        <i class="fas fa-sun toggle-icon sun-icon"></i>
+                        <i class="fas fa-moon toggle-icon moon-icon"></i>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-mesh"></div>
+        <div class="hero-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-in" data-cursor="pointer">
+                <span class="badge-pulse"></span>
+                Open to Opportunities
+            </div>
+            <h1 class="hero-title animate-in">
+                Hi, I'm <span class="text-accent-1">Vikyath</span> <span class="text-accent-2">M A</span>
+            </h1>
+            <p class="hero-subtitle animate-in">
+                <span class="typewriter" id="typewriter"></span><span class="type-cursor">|</span>
+            </p>
+            <p class="hero-description animate-in">
+                Information Science & Engineering graduate passionate about building innovative solutions
+                with Deep Learning, Computer Vision, and Modern Web Technologies.
+            </p>
+            <div class="hero-cta animate-in">
+                <a href="#projects" class="btn btn-primary magnetic" data-cursor="pointer">
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary magnetic" data-cursor="pointer">
+                    <span>Get In Touch</span>
+                </a>
+                <a href="resume.pdf" download class="btn btn-accent magnetic" data-cursor="pointer">
+                    <i class="fas fa-file-download"></i>
+                    <span>Resume</span>
+                </a>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="10">0</span>
+                    <span class="stat-label">Months Internship</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About <span class="text-accent-1">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="about-icon icon-accent-1">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p class="text-highlight">B.E in Information Science & Engineering</p>
+                    <p><strong>Honours Degree</strong></p>
+                    <p class="text-muted"><i class="fas fa-university"></i> JNNCE, Shimoga</p>
+                </div>
+                <div class="about-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="about-icon icon-accent-2">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>What I Do</h3>
+                    <p>I specialize in Deep Learning, Computer Vision, and Full-Stack development.
+                       I love transforming complex problems into elegant, user-friendly solutions.</p>
+                </div>
+                <div class="about-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="about-icon icon-accent-1">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Leadership</h3>
+                    <p>Served as <strong>Treasurer</strong> of IEEE Computer Society JNNCE, organizing state-level tech fests
+                       and conducting workshops to empower fellow students.</p>
+                </div>
+            </div>
+            <div class="tech-stack">
+                <h3 class="tech-title">Tech Stack</h3>
+                <div class="tech-icons">
+                    <div class="tech-item" data-tooltip="Python" data-cursor="pointer"><i class="fab fa-python"></i></div>
+                    <div class="tech-item" data-tooltip="JavaScript" data-cursor="pointer"><i class="fab fa-js-square"></i></div>
+                    <div class="tech-item" data-tooltip="HTML5" data-cursor="pointer"><i class="fab fa-html5"></i></div>
+                    <div class="tech-item" data-tooltip="CSS3" data-cursor="pointer"><i class="fab fa-css3-alt"></i></div>
+                    <div class="tech-item" data-tooltip="React" data-cursor="pointer"><i class="fab fa-react"></i></div>
+                    <div class="tech-item" data-tooltip="Git" data-cursor="pointer"><i class="fab fa-git-alt"></i></div>
+                    <div class="tech-item" data-tooltip="Linux" data-cursor="pointer"><i class="fab fa-linux"></i></div>
+                    <div class="tech-item" data-tooltip="Database" data-cursor="pointer"><i class="fas fa-database"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Work <span class="text-accent-2">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="exp-card card-hover" data-cursor="pointer">
+                <div class="card-glow"></div>
+                <div class="exp-header">
+                    <div>
+                        <h3>Intern</h3>
+                        <p class="exp-company"><i class="fas fa-building"></i> Ekathva Innovations Pvt. Ltd.</p>
+                    </div>
+                    <span class="exp-duration"><i class="fas fa-calendar-alt"></i> 10 Months</span>
+                </div>
+                <p class="exp-desc">Completed a comprehensive 10-month internship gaining hands-on industry experience
+                    in software development, working on real-world projects and collaborating with professional development teams.</p>
+                <div class="exp-tags">
+                    <span class="tag">Software Development</span>
+                    <span class="tag">Team Collaboration</span>
+                    <span class="tag">Industry Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured <span class="text-accent-1">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="project-visual">
+                        <div class="project-icon-bg"><i class="fas fa-microphone-alt"></i></div>
+                        <div class="project-num">01</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Text to Speech with Emotion Control</h3>
+                        <p>A deep learning-based system that converts text to speech with the ability to control
+                            emotional tone and expression. Uses advanced neural network architectures to generate
+                            natural-sounding speech with specified emotions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Neural Networks</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Speech Synthesis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="project-visual">
+                        <div class="project-icon-bg"><i class="fas fa-user-check"></i></div>
+                        <div class="project-num">02</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Attendance System using Facial Recognition</h3>
+                        <p>An automated attendance management system leveraging facial recognition technology.
+                            Captures and identifies faces in real-time, automatically marking attendance with
+                            high accuracy, eliminating manual processes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Face Recognition</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- College Journey -->
+    <section class="section section-alt" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">College <span class="text-accent-2">Journey</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="journey-nav">
+                <button class="journey-year-btn active" data-year="2022" data-cursor="pointer">2022</button>
+                <div class="journey-connector active"></div>
+                <button class="journey-year-btn" data-year="2023" data-cursor="pointer">2023</button>
+                <div class="journey-connector"></div>
+                <button class="journey-year-btn" data-year="2024" data-cursor="pointer">2024</button>
+                <div class="journey-connector"></div>
+                <button class="journey-year-btn" data-year="2025" data-cursor="pointer">2025</button>
+                <div class="journey-connector"></div>
+                <button class="journey-year-btn" data-year="2026" data-cursor="pointer">2026</button>
+            </div>
+            <div class="journey-panels">
+                <div class="journey-panel active" data-panel="2022">
+                    <div class="journey-year-display"><span>2022</span><em>The Beginning</em></div>
+                    <div class="journey-items">
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon green"><i class="fas fa-door-open"></i></div>
+                            <div><h4>Started B.E. in Information Science & Engineering</h4>
+                            <p>Began my undergraduate journey at JNNCE, Shimoga — stepping into the world of computer science, algorithms, and software engineering.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon cyan"><i class="fas fa-laptop-code"></i></div>
+                            <div><h4>Foundation Year</h4>
+                            <p>Built a strong foundation in programming fundamentals, data structures, and mathematical concepts essential for engineering.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-panel" data-panel="2023">
+                    <div class="journey-year-display"><span>2023</span><em>Exploring & Leading</em></div>
+                    <div class="journey-items">
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon amber"><i class="fas fa-handshake"></i></div>
+                            <div><h4>Joined IEEE Computer Society JNNCE</h4>
+                            <p>Became an active member of the IEEE Computer Society chapter, opening doors to technical events, networking, and leadership opportunities.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon cyan"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <div><h4>Conducted First Workshop — "Installation of OS using VMware"</h4>
+                            <p>Co-organized and conducted the very first workshop under IEEE CS JNNCE, teaching fellow students practical OS installation and virtualization skills.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-panel" data-panel="2024">
+                    <div class="journey-year-display"><span>2024</span><em>Leadership & Impact</em></div>
+                    <div class="journey-items">
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon amber"><i class="fas fa-crown"></i></div>
+                            <div><h4>Treasurer — Yugma Tech Fest (1st Edition)</h4>
+                            <p>Served as Treasurer for the inaugural Yugma Tech Fest, a state-level event by IEEE Computer Society JNNCE. Managed finances and helped bring the event to life.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon green"><i class="fas fa-redo"></i></div>
+                            <div><h4>Yugma Tech Fest — 2nd Edition</h4>
+                            <p>Continued contributing to Yugma Tech Fest for its second successful edition, building on the momentum of the inaugural event.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-panel" data-panel="2025">
+                    <div class="journey-year-display"><span>2025</span><em>Winning & Growing</em></div>
+                    <div class="journey-items">
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon amber"><i class="fas fa-trophy"></i></div>
+                            <div><h4>🥇 1st Prize — UI/UX Design Competition</h4>
+                            <p>Won first place in the UI/UX Design competition at Techzone 2025 — a national-level event. Showcased creative design thinking and user-centered approach.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon cyan"><i class="fas fa-briefcase"></i></div>
+                            <div><h4>Internship at Ekathva Innovations Pvt. Ltd.</h4>
+                            <p>Began a 10-month internship at Ekathva Innovations, gaining real-world industry experience in software development and team collaboration.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon green"><i class="fas fa-flag-checkered"></i></div>
+                            <div><h4>Participated in Techzone 2025</h4>
+                            <p>Actively participated in Techzone 2025, a national-level technical festival, engaging in multiple events and competitions.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-panel" data-panel="2026">
+                    <div class="journey-year-display"><span>2026</span><em>Culmination</em></div>
+                    <div class="journey-items">
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon amber"><i class="fas fa-graduation-cap"></i></div>
+                            <div><h4>Graduated — B.E. in ISE with Honours</h4>
+                            <p>Successfully completed Bachelor of Engineering in Information Science & Engineering with an Honours degree from JNNCE, Shimoga.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon cyan"><i class="fas fa-medal"></i></div>
+                            <div><h4>🥈 2nd Prize — Bug Bounty Hunt</h4>
+                            <p>Secured second place in the Bug Bounty Hunt competition at Techzone 2026 — a national-level event, demonstrating strong debugging and security skills.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon green"><i class="fas fa-check-double"></i></div>
+                            <div><h4>Completed Internship — Ekathva Innovations</h4>
+                            <p>Successfully completed the 10-month internship, delivering impactful contributions and gaining comprehensive professional experience.</p></div>
+                        </div>
+                        <div class="journey-item card-hover" data-cursor="pointer">
+                            <div class="card-glow"></div>
+                            <div class="ji-icon cyan"><i class="fas fa-flag"></i></div>
+                            <div><h4>Participated in Techzone 2026</h4>
+                            <p>Continued active participation at Techzone for the second consecutive year.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">My <span class="text-accent-1">Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 1</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 2</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 3</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 4</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 5</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 6</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 7</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+                <div class="cert-card card-hover" data-cursor="pointer"><div class="card-glow"></div><div class="cert-icon"><i class="fas fa-certificate"></i></div><h4>Certification 8</h4><p>Issuing Organization</p><span class="cert-badge">Verified</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section section-alt" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Achievements & <span class="text-accent-2">Activities</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="ach-ribbon gold"><i class="fas fa-trophy"></i></div>
+                    <div class="ach-content">
+                        <h3>1st Prize — UI/UX Design Competition</h3>
+                        <p class="ach-event"><i class="fas fa-star"></i> Techzone 2025 — National Level</p>
+                        <p>Won first place in the UI/UX Design competition at Techzone 2025, a national-level technical event organized by JNNCE.</p>
+                    </div>
+                </div>
+                <div class="achievement-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="ach-ribbon silver"><i class="fas fa-medal"></i></div>
+                    <div class="ach-content">
+                        <h3>2nd Prize — Bug Bounty Hunt</h3>
+                        <p class="ach-event"><i class="fas fa-star"></i> Techzone 2026 — National Level</p>
+                        <p>Secured second place in the Bug Bounty Hunt competition at Techzone 2026, demonstrating strong debugging and security analysis skills.</p>
+                    </div>
+                </div>
+                <div class="achievement-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="ach-ribbon cyan"><i class="fas fa-users-cog"></i></div>
+                    <div class="ach-content">
+                        <h3>Treasurer — Yugma Tech Fest</h3>
+                        <p class="ach-event"><i class="fas fa-globe"></i> IEEE CS JNNCE — State Level</p>
+                        <p>Served as Treasurer for the 1st organizing committee of Yugma Tech Fest. Successfully organized the event twice.</p>
+                    </div>
+                </div>
+                <div class="achievement-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="ach-ribbon amber"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="ach-content">
+                        <h3>Workshop Conductor</h3>
+                        <p class="ach-event"><i class="fas fa-globe"></i> IEEE CS JNNCE</p>
+                        <p>Co-conducted the first workshop on "Installation of OS using VMware" under IEEE Computer Society.</p>
+                    </div>
+                </div>
+                <div class="achievement-card card-hover" data-cursor="pointer">
+                    <div class="card-glow"></div>
+                    <div class="ach-ribbon green"><i class="fas fa-flag"></i></div>
+                    <div class="ach-content">
+                        <h3>Techzone 2025 & 2026 Participant</h3>
+                        <p class="ach-event"><i class="fas fa-university"></i> JNNCE — National Level</p>
+                        <p>Actively participated in Techzone across two consecutive editions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Get In <span class="text-accent-1">Touch</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card card-hover" data-cursor="pointer">
+                        <div class="card-glow"></div>
+                        <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                        <div><h4>Email</h4><a href="mailto:vikyathma@gmail.com">vikyathma@gmail.com</a></div>
+                    </div>
+                    <div class="contact-card card-hover" data-cursor="pointer">
+                        <div class="card-glow"></div>
+                        <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/vikyath-m-a-522796343" target="_blank">Vikyath M A</a></div>
+                    </div>
+                    <div class="contact-card card-hover" data-cursor="pointer">
+                        <div class="card-glow"></div>
+                        <div class="c-icon"><i class="fab fa-github"></i></div>
+                        <div><h4>GitHub</h4><a href="https://github.com/Vikyathma" target="_blank">Vikyathma</a></div>
+                    </div>
+                    <a href="resume.pdf" download class="contact-card resume-card card-hover" data-cursor="pointer">
+                        <div class="card-glow"></div>
+                        <div class="c-icon resume-icon-box"><i class="fas fa-file-pdf"></i></div>
+                        <div><h4>Resume</h4><span class="resume-dl"><i class="fas fa-download"></i> View & Download</span></div>
+                    </a>
+                </div>
+                <div class="contact-form-wrapper card-hover">
+                    <div class="card-glow"></div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full magnetic" data-cursor="pointer">
+                            <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><span class="logo-symbol">⟨</span>V.MA<span class="logo-symbol">⟩</span></div>
+                <div class="footer-socials">
+                    <a href="mailto:vikyathma@gmail.com" class="social-link" data-cursor="pointer"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/vikyath-m-a-522796343" target="_blank" class="social-link" data-cursor="pointer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Vikyathma" target="_blank" class="social-link" data-cursor="pointer"><i class="fab fa-github"></i></a>
+                    <a href="resume.pdf" download class="social-link" data-cursor="pointer"><i class="fas fa-file-download"></i></a>
+                </div>
+                <p class="footer-text">&copy; 2026 Vikyath M A. Crafted with <span class="heart">&hearts;</span> and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
